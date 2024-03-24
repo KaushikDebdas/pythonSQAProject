@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.116" timestamp="2024-03-24T13:41:56.858425" hostname="LAPTOP-KAUSHIK"><testcase classname="test_sample" name="test_sample_one" time="0.001" /><testcase classname="test_sample" name="test_sample_two" time="0.001" /><testcase classname="test_sample" name="test_sample_three" time="0.001"><failure message="AssertionError: a is not equal to b&#10;assert False&#10; +  where False = &lt;method-wrapper '__eq__' of str object at 0x000001A94F4624C0&gt;('Das')&#10; +    where &lt;method-wrapper '__eq__' of str object at 0x000001A94F4624C0&gt; = 'Arun'.__eq__">def test_sample_three():
+        a = "Arun"
+        b = "Das"
+&gt;       assert a.__eq__(b), "a is not equal to b"
+E       AssertionError: a is not equal to b
+E       assert False
+E        +  where False = &lt;method-wrapper '__eq__' of str object at 0x000001A94F4624C0&gt;('Das')
+E        +    where &lt;method-wrapper '__eq__' of str object at 0x000001A94F4624C0&gt; = 'Arun'.__eq__
+
+test_sample.py:21: AssertionError</failure></testcase></testsuite></testsuites>
