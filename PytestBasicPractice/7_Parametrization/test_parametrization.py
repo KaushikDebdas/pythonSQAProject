@@ -44,6 +44,4 @@ def test_login(test_setup, username, password):
     login = driver.find_element(By.XPATH, "//body/div[3]/div[1]/fieldset[1]/form[1]/div[1]/input[3]").click()
     time.sleep(2)  # 2secnd
 
-def test_sample_one(username,password):
-    print("Inside sample one")
 
