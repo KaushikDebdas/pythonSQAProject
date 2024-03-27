@@ -34,7 +34,7 @@ def test_setup():
 ])
 
 def test_login(test_setup, username, password):
-    print(username+"-"+password)
+    # print(username+"-"+password)
     # input select
     username = driver.find_element(By.ID, "uname").send_keys(username)
     time.sleep(2)  # 2secnd
