@@ -1,11 +1,14 @@
 '''
 In Pytest,
-- pytest.fixture() by using this, it will mean before run any test, the fixture portion is run first
-- marker is: @pytest.fixture()
+- if we have multiple file in a folder and then we need to run same test again and again, then we need fixture
+- the fixture format can store in a separate file called conftest.py
+- this file use centrally
+- if we use autouse=True inside the pytest.fixture() then it will automatic set attribute in every other file
 '''
 
 
-def test_search_with_valid_input(test_setup_and_teardown):
+def test_search_with_valid_input():
     print("Testing test_search_with_valid_input")
-def test_search_with_invalid_input(test_setup_and_teardown):
+
+def test_search_with_invalid_input():
     print("Testing test_search_with_invalid_input")
