@@ -1,7 +1,7 @@
 import datetime
 import random
 import string
-
+from faker import Faker
 
 class BaseTest:
     # every time generate new email
@@ -46,3 +46,12 @@ class BaseTest:
             mobile_number += str(random.randint(0, 9))
         return mobile_number
     # Generate and print a random Bangladeshi mobile number
+
+    def fake_name_genarator(self):
+        fake = Faker()
+        random_first_name = fake.first_name()
+        random_last_name = fake.last_name()
+
+        return random_first_name, random_last_name
+        # print("Random First Name:", random_first_name)
+        # print("Random Last Name:", random_last_name)
