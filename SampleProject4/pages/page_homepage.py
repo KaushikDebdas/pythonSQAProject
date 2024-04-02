@@ -9,6 +9,7 @@ class HomePage:
     search_button_xpath = "//div[contains(@class,'input-group')]/span/button"
     my_account_dropdown_menu_xpath = "//span[contains(text(),'My Account')]"
     login_option_xpath = "//a[contains(text(),'Login')]"
+    register_option_xpath ="//a[contains(text(),'Register')]"
 
     def enter_search_box_field_name(self, productName):
         self.driver.find_element(By.NAME, self.search_box_field_name).click()
@@ -23,3 +24,6 @@ class HomePage:
 
     def click_login_option(self):
         self.driver.find_element(By.XPATH, self.login_option_xpath).click()
+
+    def click_register_option(self):
+        self.driver.find_element(By.XPATH, self.register_option_xpath).click()
