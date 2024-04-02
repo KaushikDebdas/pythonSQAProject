@@ -8,11 +8,12 @@ from SampleProject4.pages.page_accountSuccess import AccountSuccessPage
 from SampleProject4.pages.page_homepage import HomePage
 from SampleProject4.pages.page_register import RegisterPage
 from SampleProject4.tests.BaseTest import BaseTest
+from SampleProject4.utilites import ExcelUtilites
 from selenium.webdriver.common.by import By
 
 @pytest.mark.usefixtures("test_setup_and_tearDown")
 class TestRegister(BaseTest):
-    def test_register(self):
+    def test_register_with_valid_information(self):
         # HomePage Class Calling
         home_page = HomePage(self.driver)
         # My Account Dropdown Click
@@ -234,3 +235,136 @@ class TestRegister(BaseTest):
             expected_password_warning_msg)
         # assert self.driver.find_element(By.XPATH, "//input[@id='input-password']/following-sibling::div").text.__contains__(
         #     expected_password_warning_msg)
+
+    def test_register_with_valid_information_and_read_data_from_excel(self):
+        # HomePage Class Calling
+        home_page = HomePage(self.driver)
+        # My Account Dropdown Click
+        home_page.click_my_account_dropdown_menu()
+        time.sleep(2)
+        # Register Option select
+        home_page.click_register_option()
+        time.sleep(2)
+        # RegisterPage Class Calling
+        register_page = RegisterPage(self.driver)
+        # First Name
+        first_name = ExcelUtilites.get_cell_data(
+            "D:/Study Videos/SQA/Python/pythonSQAProject/SampleProject4/ExcelFiles/DemoLoginExcel.xlsx", "RegisterTest",
+            2, 1)
+        register_page.enter_first_name(first_name)
+        time.sleep(2)
+        # Last Name
+        last_name = ExcelUtilites.get_cell_data(
+            "D:/Study Videos/SQA/Python/pythonSQAProject/SampleProject4/ExcelFiles/DemoLoginExcel.xlsx", "RegisterTest",
+            2, 2)
+        register_page.enter_last_name(last_name)
+        time.sleep(2)
+        # Email
+        random_email = self.generate_email_with_timestamp()
+        print("Random Email: " + random_email)
+        register_page.enter_email(random_email)
+        time.sleep(2)
+        # Telephone
+        bd_mobile = self.generate_bd_mobile_number()
+        print("Bangladeshi Mobile Number:", bd_mobile)
+        register_page.enter_telephone(bd_mobile)
+        time.sleep(2)
+        # Password
+        random_password = self.generate_random_password()
+        print("Random Password: " + random_password)
+        register_page.enter_password(random_password)
+        time.sleep(2)
+        # Confirm Password
+        register_page.enter_confirm_password(random_password)
+        time.sleep(2)
+        # Newsletter Radio Button
+        register_page.click_newsletter_yes_radio_button()
+        time.sleep(2)
+        register_page.click_newsletter_no_radio_button()
+        time.sleep(2)
+        register_page.click_newsletter_yes_radio_button()
+        time.sleep(2)
+        # Privacy Policy Check Mark
+        register_page.click_privacy_policy_checkbox()
+        time.sleep(2)
+        # Continue Button
+        register_page.click_continue_button()
+        time.sleep(2)
+
+        # AccountSuccessPage Class Calling
+        account_create_success_page = AccountSuccessPage(self.driver)
+        account_creation_confirm_msg = "Your Account Has Been Created!"
+        assert account_create_success_page.display_status_of_account_creation_msg().__contains__(
+            account_creation_confirm_msg)
+
+    def test_register_with_valid_information_and_write_to_excel(self):
+        # HomePage Class Calling
+        home_page = HomePage(self.driver)
+        # My Account Dropdown Click
+        home_page.click_my_account_dropdown_menu()
+        time.sleep(2)
+        # Register Option select
+        home_page.click_register_option()
+        time.sleep(2)
+        # RegisterPage Class Calling
+        register_page = RegisterPage(self.driver)
+
+        # Generate random first name and last name
+        fake_first_name, fake_last_name = self.fake_name_genarator()
+        # First Name
+        first_name = fake_first_name
+        print("First Name: " +first_name)
+        register_page.enter_first_name(first_name)
+        time.sleep(2)
+        # Last Name
+        last_name = fake_last_name
+        print("Last Name: " +last_name)
+        register_page.enter_last_name(last_name)
+        time.sleep(2)
+        # Email
+        random_email = self.generate_email_with_timestamp()
+        print("Random Email: " + random_email)
+        register_page.enter_email(random_email)
+        time.sleep(2)
+        # Telephone
+        bd_mobile = self.generate_bd_mobile_number()
+        print("Bangladeshi Mobile Number:", bd_mobile)
+        register_page.enter_telephone(bd_mobile)
+        time.sleep(2)
+        # Password
+        random_password = self.generate_random_password()
+        print("Random Password: " + random_password)
+        register_page.enter_password(random_password)
+        time.sleep(2)
+        # Confirm Password
+        register_page.enter_confirm_password(random_password)
+        time.sleep(2)
+        # Newsletter Radio Button
+        register_page.click_newsletter_yes_radio_button()
+        time.sleep(2)
+        register_page.click_newsletter_no_radio_button()
+        time.sleep(2)
+        register_page.click_newsletter_yes_radio_button()
+        time.sleep(2)
+        # Privacy Policy Check Mark
+        register_page.click_privacy_policy_checkbox()
+        time.sleep(2)
+        # Continue Button
+        register_page.click_continue_button()
+        time.sleep(2)
+
+        # Get all entered data
+        data = [
+            [first_name, last_name, random_email, bd_mobile, random_password]
+        ]
+
+        # Write data to Excel
+        excel_path = "D:/Study Videos/SQA/Python/pythonSQAProject/SampleProject4/ExcelFiles/DemoLoginExcel.xlsx"
+        sheet_name = "UserInfo"
+        headers = ["First Name", "Last Name", "Email", "Telephone", "Password"]
+        ExcelUtilites.write_data_to_excel(excel_path, sheet_name, data, headers)
+
+        # AccountSuccessPage Class Calling
+        account_create_success_page = AccountSuccessPage(self.driver)
+        account_creation_confirm_msg = "Your Account Has Been Created!"
+        assert account_create_success_page.display_status_of_account_creation_msg().__contains__(account_creation_confirm_msg)
