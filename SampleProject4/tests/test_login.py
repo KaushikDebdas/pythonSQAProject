@@ -7,39 +7,11 @@ import pytest
 from SampleProject4.pages.page_accountDetails import AccountDetailsPage
 from SampleProject4.pages.page_homepage import HomePage
 from SampleProject4.pages.page_login import LoginPage
+from SampleProject4.tests.BaseTest import BaseTest
 from selenium.webdriver.common.by import By
 
 @pytest.mark.usefixtures("test_setup_and_tearDown")
-class TestLogin:
-    # every time generate new email
-    def generate_email_with_timestamp(self, prefix="user", domain="example.com"):
-        """
-        Generate a new email address with a timestamp appended to it.
-        Args:
-            prefix (str): The prefix part of the email address. Default is "user".
-            domain (str): The domain part of the email address. Default is "example.com".
-        Returns:
-            str: The generated email address with timestamp.
-        """
-        timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-        email = f"{prefix}_{timestamp}@{domain}"
-        return email
-
-    # every time generate new password
-    def generate_random_password(self, length=12):
-        """
-        Generate a random password.
-        Args:
-            length (int): Length of the password. Default is 12.
-        Returns:
-            str: The generated random password.
-        """
-        # Define the characters to use for the password
-        characters = string.ascii_letters + string.digits + string.punctuation
-        # Generate the password
-        password = ''.join(random.choice(characters) for _ in range(length))
-        return password
-
+class TestLogin(BaseTest):
     def test_login_with_valid_field(self):
         # HomePage Class Calling
         home_page = HomePage(self.driver)
