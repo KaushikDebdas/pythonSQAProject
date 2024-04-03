@@ -1,6 +1,8 @@
 import datetime
 import random
 import string
+
+from SampleProject4.utilites.LogFileGenerate import Logger
 from faker import Faker
 
 class BaseTest:
@@ -53,5 +55,22 @@ class BaseTest:
         random_last_name = fake.last_name()
 
         return random_first_name, random_last_name
-        # print("Random First Name:", random_first_name)
-        # print("Random Last Name:", random_last_name)
+
+    # Logger reuse from LogFileGenerate.py file
+    def log_info(self, msg):
+        Logger.info(msg)
+
+    def log_update(self, msg):
+        Logger.update(msg)
+
+    def log_exception(self, msg):
+        Logger.exception(msg)
+
+    def log_debug(self, msg):
+        Logger.debug(msg)
+
+    def log_object(self, object):
+        Logger.object(object)
+
+    def log_clear(self):
+        Logger.clear()

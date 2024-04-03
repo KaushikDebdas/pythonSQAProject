@@ -1,0 +1,50 @@
+2024-04-03 01:20 PM | INFO | Starting Test Login with Valid Field
+2024-04-03 01:20 PM | INFO | Click My Account Dropdown
+2024-04-03 01:20 PM | INFO | Click Login Option
+2024-04-03 01:20 PM | INFO | Enter Valid Email Address: wokeb44453@irnini.com
+2024-04-03 01:20 PM | INFO | Enter Valid Password: r6r@635cLzGJae
+2024-04-03 01:20 PM | INFO | Click Login Button
+2024-04-03 01:20 PM | INFO | Assertion Successful
+2024-04-03 01:20 PM | INFO | Starting Test Login with Invalid Email and Invalid Password
+2024-04-03 01:20 PM | INFO | Click My Account Dropdown
+2024-04-03 01:20 PM | INFO | Click Login Option
+2024-04-03 01:20 PM | INFO | Enter Random Email Address: user_20240403132045@example.com
+2024-04-03 01:20 PM | INFO | Enter Random Password: e*w0j4LS~,__
+2024-04-03 01:20 PM | INFO | Click Login Button
+2024-04-03 01:20 PM | INFO | Assertion Successful
+2024-04-03 01:21 PM | INFO | Starting Test Login with Valid Email and Invalid Password
+2024-04-03 01:21 PM | INFO | Click My Account Dropdown
+2024-04-03 01:21 PM | INFO | Click Login Option
+2024-04-03 01:21 PM | INFO | Enter Valid Email Address: wokeb44453@irnini.com
+2024-04-03 01:21 PM | INFO | Enter Random Password: #kddUYVE4_hJ
+2024-04-03 01:21 PM | INFO | Click Login Button
+2024-04-03 01:21 PM | INFO | Assertion Successful
+2024-04-03 01:21 PM | INFO | Starting Login Test with Invalid Email and Valid Password
+2024-04-03 01:21 PM | INFO | Click My Account Dropdown
+2024-04-03 01:21 PM | INFO | Click Login Option
+2024-04-03 01:21 PM | INFO | Enter Random Email Address: user_20240403132126@example.com
+2024-04-03 01:21 PM | INFO | Enter Valid Password: r6r@635cLzGJae
+2024-04-03 01:21 PM | INFO | Click Login Button
+2024-04-03 01:21 PM | INFO | Assertion Successful
+2024-04-03 01:21 PM | INFO | Starting Login Test with Excel File Data
+2024-04-03 01:21 PM | INFO | Click My Account Dropdown
+2024-04-03 01:21 PM | INFO | Click Login Option
+2024-04-03 01:21 PM | INFO | Read Email from Excel
+2024-04-03 01:21 PM | INFO | Read Password from Excel
+2024-04-03 01:21 PM | INFO | Click Login Button
+2024-04-03 01:21 PM | INFO | Assertion Successful
+2024-04-03 01:22 PM | INFO | Starting Login Test with Excel File Data
+2024-04-03 01:22 PM | INFO | Click My Account Dropdown
+2024-04-03 01:22 PM | INFO | Click Login Option
+2024-04-03 01:22 PM | INFO | Read Email from Excel
+2024-04-03 01:22 PM | INFO | Read Password from Excel
+2024-04-03 01:22 PM | INFO | Click Login Button
+2024-04-03 01:22 PM | INFO | Assertion Successful
+2024-04-03 01:29 PM | INFO | ** Starting Test Login with Valid Field **
+2024-04-03 01:29 PM | INFO | Click My Account Dropdown
+2024-04-03 01:29 PM | INFO | Click Login Option
+2024-04-03 01:29 PM | INFO | Enter Valid Email Address: wokeb44453@irnini.com
+2024-04-03 01:29 PM | INFO | Enter Valid Password: r6r@635cLzGJae
+2024-04-03 01:29 PM | INFO | Click Login Button
+2024-04-03 01:29 PM | INFO | Assertion Successful
+2024-04-03 01:29 PM | INFO | ** Ending Test Login with Valid Field **
