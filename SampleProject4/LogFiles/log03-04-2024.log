@@ -48,3 +48,51 @@
 2024-04-03 01:29 PM | INFO | Click Login Button
 2024-04-03 01:29 PM | INFO | Assertion Successful
 2024-04-03 01:29 PM | INFO | ** Ending Test Login with Valid Field **
+2024-04-03 11:31 PM | INFO | ** Starting Test Login with Valid Field **
+2024-04-03 11:31 PM | INFO | Click My Account Dropdown
+2024-04-03 11:31 PM | INFO | Click Login Option
+2024-04-03 11:31 PM | INFO | Enter Valid Email Address: wokeb44453@irnini.com
+2024-04-03 11:32 PM | INFO | Enter Valid Password: r6r@635cLzGJae
+2024-04-03 11:32 PM | INFO | Click Login Button
+2024-04-03 11:32 PM | INFO | Assertion Successful
+2024-04-03 11:32 PM | INFO | ** Ending Test Login with Valid Field **
+2024-04-03 11:32 PM | INFO | ** Starting Test Login with Invalid Email and Invalid Password **
+2024-04-03 11:32 PM | INFO | Click My Account Dropdown
+2024-04-03 11:32 PM | INFO | Click Login Option
+2024-04-03 11:32 PM | INFO | Enter Random Email Address: user_20240403233222@example.com
+2024-04-03 11:32 PM | INFO | Enter Random Password: B\{%#%H0"/xa
+2024-04-03 11:32 PM | INFO | Click Login Button
+2024-04-03 11:32 PM | INFO | Assertion Successful
+2024-04-03 11:32 PM | INFO | ** Ending Test Login with Invalid Email and Invalid Password **
+2024-04-03 11:32 PM | INFO | ** Starting Test Login with Valid Email and Invalid Password **
+2024-04-03 11:32 PM | INFO | Click My Account Dropdown
+2024-04-03 11:32 PM | INFO | Click Login Option
+2024-04-03 11:32 PM | INFO | Enter Valid Email Address: wokeb44453@irnini.com
+2024-04-03 11:32 PM | INFO | Enter Random Password: 7J?:E,.kg`:^
+2024-04-03 11:32 PM | INFO | Click Login Button
+2024-04-03 11:32 PM | INFO | Assertion Successful
+2024-04-03 11:32 PM | INFO | ** Ending Test Login with Valid Email and Invalid Password **
+2024-04-03 11:33 PM | INFO | ** Starting Login Test with Invalid Email and Valid Password **
+2024-04-03 11:33 PM | INFO | Click My Account Dropdown
+2024-04-03 11:33 PM | INFO | Click Login Option
+2024-04-03 11:33 PM | INFO | Enter Random Email Address: user_20240403233311@example.com
+2024-04-03 11:33 PM | INFO | Enter Valid Password: r6r@635cLzGJae
+2024-04-03 11:33 PM | INFO | Click Login Button
+2024-04-03 11:33 PM | INFO | Assertion Successful
+2024-04-03 11:33 PM | INFO | ** Ending Login Test with Invalid Email and Valid Password **
+2024-04-03 11:33 PM | INFO | ** Starting Login Test with Excel File Data **
+2024-04-03 11:33 PM | INFO | Click My Account Dropdown
+2024-04-03 11:33 PM | INFO | Click Login Option
+2024-04-03 11:33 PM | INFO | Read Email from Excel
+2024-04-03 11:33 PM | INFO | Read Password from Excel
+2024-04-03 11:33 PM | INFO | Click Login Button
+2024-04-03 11:33 PM | INFO | Assertion Successful
+2024-04-03 11:33 PM | INFO | ** Ending Login Test with Excel File Data **
+2024-04-03 11:33 PM | INFO | ** Starting Login Test with Excel File Data **
+2024-04-03 11:33 PM | INFO | Click My Account Dropdown
+2024-04-03 11:33 PM | INFO | Click Login Option
+2024-04-03 11:34 PM | INFO | Read Email from Excel
+2024-04-03 11:34 PM | INFO | Read Password from Excel
+2024-04-03 11:34 PM | INFO | Click Login Button
+2024-04-03 11:34 PM | INFO | Assertion Successful
+2024-04-03 11:34 PM | INFO | ** Ending Login Test with Excel File Data **

@@ -5,6 +5,7 @@ from SampleProject4.pages.page_homepage import HomePage
 from SampleProject4.pages.page_search import SearchPage
 from selenium.webdriver.common.by import By
 
+
 @pytest.mark.usefixtures("test_setup_and_tearDown")
 class TestSearch:
     def test_search_for_valid_product(self):
